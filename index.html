@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>美髪大学 | 髪質改善オンラインサロン</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600&family=Zen+Old+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Zen Old Mincho"', '"Noto Serif JP"', 'serif'],
+              sans: ['"Helvetica Neue"', 'Arial', 'sans-serif'],
+            },
+            colors: {
+              sage: {
+                50: '#f4f7f6',
+                100: '#e3ebe9',
+                200: '#c5d9d4',
+                300: '#9ebfb6',
+                400: '#799f95',
+                500: '#5c8278',
+                600: '#486860',
+                700: '#3d544e',
+                800: '#334440',
+                900: '#2c3936',
+              },
+              gray: {
+                50: '#f9fafb',
+                100: '#f3f4f6',
+                800: '#27272a',
+                900: '#18181b',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #ffffff;
+        color: #333;
+      }
+      .tracking-super-wide {
+        letter-spacing: 0.25em;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

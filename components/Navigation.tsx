@@ -1,0 +1,90 @@
+import React, { useState, useEffect } from 'react';
+import { Menu, X } from 'lucide-react';
+
+const Navigation: React.FC = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navLinks = [
+    { label: 'お悩み', href: '#problem' },
+    { label: 'ストーリー', href: '#story' },
+    { label: 'カリキュラム', href: '#curriculum' },
+    { label: '入会案内', href: '#pricing' },
+  ];
+
+  return (
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled ? 'bg-white/95 backdrop-blur-sm py-4 border-b border-gray-100' : 'bg-transparent py-6'
+      }`}
+    >
+      <div className="max-w-5xl mx-auto px-6 flex justify-between items-center">
+        <div className={`text-xl font-serif tracking-widest font-medium ${isScrolled ? 'text-gray-800' : 'text-gray-900'}`}>
+          美髪大学
+        </div>
+
+        {/* Desktop Menu */}
+        <div className="hidden md:flex space-x-10 items-center">
+          {navLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className={`text-xs tracking-widest uppercase hover:text-sage-500 transition-colors ${
+                isScrolled ? 'text-gray-500' : 'text-gray-600'
+              }`}
+            >
+              {link.label}
+            </a>
+          ))}
+          <a
+            href="#pricing"
+            className="border border-gray-300 px-6 py-2 text-xs tracking-widest text-gray-800 hover:bg-sage-50 hover:border-sage-300 transition-all duration-300"
+          >
+            お申し込み
+          </a>
+        </div>
+
+        {/* Mobile Toggle */}
+        <button
+          className="md:hidden text-gray-800"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="absolute top-full left-0 right-0 bg-white border-t border-gray-100 md:hidden flex flex-col items-center py-12 space-y-8 h-screen">
+          {navLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-gray-800 text-sm font-serif tracking-widest"
+            >
+              {link.label}
+            </a>
+          ))}
+           <a
+            href="#pricing"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="bg-gray-900 text-white px-8 py-3 text-xs tracking-widest"
+          >
+            お申し込み
+          </a>
+        </div>
+      )}
+    </nav>
+  );
+};
+
+export default Navigation;
