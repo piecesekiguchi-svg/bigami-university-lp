@@ -55,7 +55,9 @@ const Pricing: React.FC = () => {
 
           <div className="text-center">
              <a 
-               href="#" 
+               href="https://line.me/R/ti/p/@239dvolm" 
+               target="_blank"
+               rel="noopener noreferrer"
                className="inline-block min-w-[280px] bg-white text-black py-4 px-8 text-xs tracking-[0.2em] hover:bg-cyan-400 hover:text-black transition-all duration-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)]"
              >
                入会申し込みはこちら
