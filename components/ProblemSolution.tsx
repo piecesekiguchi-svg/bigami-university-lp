@@ -3,10 +3,10 @@ import Section from './ui/Section';
 
 const ProblemSolution: React.FC = () => {
   return (
-    <Section id="problem" background="blue-gradient" className="relative overflow-hidden">
+    <Section id="problem" background="blue-gradient" className="relative overflow-hidden content-visibility-auto contain-content">
       {/* Decorative overlay for the gradient texture */}
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 mix-blend-overlay"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-transparent"></div>
+      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 mix-blend-overlay pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-transparent pointer-events-none"></div>
 
       <div className="relative z-10 max-w-4xl mx-auto">
         <div className="space-y-12 font-serif text-white/90 leading-loose">

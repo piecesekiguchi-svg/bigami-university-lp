@@ -2,17 +2,17 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-brand-dark">
-      {/* Background Glow Effects */}
-      <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-red-600/20 rounded-full blur-[120px] mix-blend-screen animate-pulse"></div>
-      <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[120px] mix-blend-screen animate-pulse delay-1000"></div>
-      <div className="absolute bottom-[-20%] left-[20%] w-[800px] h-[800px] bg-purple-600/10 rounded-full blur-[120px] mix-blend-screen"></div>
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-brand-dark contain-paint">
+      {/* Background Glow Effects - Optimized using radial gradients instead of blur filters for better mobile performance */}
+      <div className="absolute top-[-20%] left-[-10%] w-[80vw] h-[80vw] md:w-[600px] md:h-[600px] bg-[radial-gradient(circle,rgba(220,38,38,0.15)_0%,transparent_70%)] mix-blend-screen animate-pulse transform-gpu will-change-transform"></div>
+      <div className="absolute top-[-20%] right-[-10%] w-[80vw] h-[80vw] md:w-[600px] md:h-[600px] bg-[radial-gradient(circle,rgba(37,99,235,0.15)_0%,transparent_70%)] mix-blend-screen animate-pulse delay-1000 transform-gpu will-change-transform"></div>
+      <div className="absolute bottom-[-20%] left-[20%] w-[90vw] h-[90vw] md:w-[800px] md:h-[800px] bg-[radial-gradient(circle,rgba(147,51,234,0.1)_0%,transparent_70%)] mix-blend-screen transform-gpu"></div>
 
       {/* Decorative Light Beams */}
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-           <path d="M0,0 C30,20 70,20 100,0" stroke="url(#grad1)" strokeWidth="0.5" fill="none" />
-           <path d="M0,100 C30,80 70,80 100,100" stroke="url(#grad2)" strokeWidth="0.5" fill="none" />
+           <path d="M0,0 C30,20 70,20 100,0" stroke="url(#grad1)" strokeWidth="0.5" fill="none" vectorEffect="non-scaling-stroke" />
+           <path d="M0,100 C30,80 70,80 100,100" stroke="url(#grad2)" strokeWidth="0.5" fill="none" vectorEffect="non-scaling-stroke" />
            <defs>
              <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
                <stop offset="0%" stopColor="#ec4899" stopOpacity="0" />
@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
         {/* Main Title Area */}
         <div className="text-center mb-16 md:mb-20">
             <p className="text-xs tracking-[0.4em] text-white/60 mb-4 uppercase">Online Salon</p>
-            <h1 className="text-4xl md:text-6xl font-serif tracking-widest text-white mb-2 text-glow">
+            <h1 className="text-4xl md:text-6xl font-serif tracking-widest text-white mb-2 text-glow transform-gpu">
               BIGAMI <span className="font-thin mx-2 text-white/50">|</span> UNIVERSITY
             </h1>
         </div>

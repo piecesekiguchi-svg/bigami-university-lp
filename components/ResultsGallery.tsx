@@ -6,22 +6,23 @@ const ResultsGallery: React.FC = () => {
     {
       title: "Natural Straight",
       category: "縮毛矯正",
-      url: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=2069&auto=format&fit=crop"
+      // Optimization: fm=webp for format, q=80 for high quality but low size
+      url: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=600&h=750&auto=format&fit=crop&fm=webp&q=80"
     },
     {
       title: "Glossy Finish",
       category: "髪質改善トリートメント",
-      url: "https://images.unsplash.com/photo-1522337360788-8b13df772ec2?q=80&w=2070&auto=format&fit=crop"
+      url: "https://images.unsplash.com/photo-1522337360788-8b13df772ec2?w=600&h=750&auto=format&fit=crop&fm=webp&q=80"
     },
     {
       title: "Time Efficiency",
       category: "時短カラー＆矯正",
-      url: "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=2069&auto=format&fit=crop"
+      url: "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&h=750&auto=format&fit=crop&fm=webp&q=80"
     }
   ];
 
   return (
-    <Section background="dark" className="border-t border-white/5">
+    <Section background="dark" className="border-t border-white/5 content-visibility-auto">
       <div className="text-center mb-20">
         <span className="text-cyan-500 tracking-[0.3em] text-[10px] uppercase block mb-4">Visual Results</span>
         <h2 className="font-serif text-3xl text-white tracking-widest">技術が生み出す、圧倒的な美。</h2>
@@ -29,10 +30,14 @@ const ResultsGallery: React.FC = () => {
 
       <div className="grid md:grid-cols-3 gap-1">
         {results.map((item, index) => (
-          <div key={index} className="relative aspect-[4/5] overflow-hidden group">
+          <div key={index} className="relative aspect-[4/5] overflow-hidden group bg-brand-gray">
             <img 
               src={item.url} 
-              alt={item.title} 
+              alt={item.title}
+              width="600"
+              height="750"
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
             />
             {/* Overlay */}

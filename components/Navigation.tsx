@@ -21,7 +21,7 @@ const Navigation: React.FC = () => {
   ];
 
   // Using the thumbnail API which is often more reliable for direct embedding without authentication issues if shared properly
-  const logoUrl = "https://drive.google.com/thumbnail?id=1_IDgtVCG_5hpGW75XYU0lrNHFBXqM1UU&sz=w1000";
+  const logoUrl = "https://drive.google.com/thumbnail?id=1_IDgtVCG_5hpGW75XYU0lrNHFBXqM1UU&sz=w200";
 
   return (
     <nav
@@ -34,6 +34,8 @@ const Navigation: React.FC = () => {
            <img 
              src={logoUrl} 
              alt="美髪大学" 
+             width="48"
+             height="48"
              className="h-full w-auto object-contain" 
              // Fallback to text if image fails to load
              onError={(e) => {
@@ -67,6 +69,7 @@ const Navigation: React.FC = () => {
         <button
           className="md:hidden text-white"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Menu"
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
