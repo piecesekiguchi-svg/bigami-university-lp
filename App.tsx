@@ -9,7 +9,7 @@ import Navigation from './components/Navigation';
 
 const App: React.FC = () => {
   return (
-    <div className="font-sans text-gray-800 antialiased selection:bg-sage-100 selection:text-sage-900 overflow-x-hidden bg-white">
+    <div className="font-sans text-white antialiased selection:bg-neon-blue selection:text-white overflow-x-hidden bg-brand-dark">
       <Navigation />
       <main>
         <Hero />

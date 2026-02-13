@@ -17,24 +17,20 @@
               sans: ['"Helvetica Neue"', 'Arial', 'sans-serif'],
             },
             colors: {
-              sage: {
-                50: '#f4f7f6',
-                100: '#e3ebe9',
-                200: '#c5d9d4',
-                300: '#9ebfb6',
-                400: '#799f95',
-                500: '#5c8278',
-                600: '#486860',
-                700: '#3d544e',
-                800: '#334440',
-                900: '#2c3936',
+              neon: {
+                blue: '#3b82f6',
+                purple: '#8b5cf6',
+                pink: '#ec4899',
+                cyan: '#06b6d4',
               },
-              gray: {
-                50: '#f9fafb',
-                100: '#f3f4f6',
-                800: '#27272a',
-                900: '#18181b',
+              brand: {
+                dark: '#050505',
+                gray: '#1a1a1a',
               }
+            },
+            backgroundImage: {
+              'hero-glow': 'conic-gradient(from 90deg at 50% 50%, #000000 0%, #1a1a1a 50%, #000000 100%)',
+              'blue-gradient': 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)',
             }
           }
         }
@@ -42,11 +38,14 @@
     </script>
     <style>
       body {
-        background-color: #ffffff;
-        color: #333;
+        background-color: #050505;
+        color: #ffffff;
       }
-      .tracking-super-wide {
-        letter-spacing: 0.25em;
+      .text-glow {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+      }
+      .circle-glow {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.2), inset 0 0 15px rgba(255, 255, 255, 0.1);
       }
     </style>
   <script type="importmap">

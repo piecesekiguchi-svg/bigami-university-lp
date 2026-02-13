@@ -4,14 +4,14 @@ interface SectionProps {
   children: ReactNode;
   className?: string;
   id?: string;
-  background?: 'white' | 'light' | 'dark';
+  background?: 'transparent' | 'blue-gradient' | 'dark';
 }
 
-const Section: React.FC<SectionProps> = ({ children, className = '', id, background = 'white' }) => {
+const Section: React.FC<SectionProps> = ({ children, className = '', id, background = 'transparent' }) => {
   const bgClasses = {
-    white: 'bg-white',
-    light: 'bg-stone-50',
-    dark: 'bg-stone-900 text-white',
+    transparent: 'bg-transparent',
+    'blue-gradient': 'bg-gradient-to-br from-blue-900 to-cyan-900',
+    dark: 'bg-black',
   };
 
   return (

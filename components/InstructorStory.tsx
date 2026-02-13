@@ -3,23 +3,27 @@ import Section from './ui/Section';
 
 const InstructorStory: React.FC = () => {
   return (
-    <Section id="story" className="overflow-hidden bg-white">
-      <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-16">
-          <span className="text-sage-500 tracking-[0.3em] text-[10px] uppercase block mb-4">The Story</span>
-          <h2 className="font-serif text-3xl md:text-4xl text-gray-900 leading-relaxed">
+    <Section id="story" background="dark" className="relative overflow-hidden">
+      <div className="max-w-4xl mx-auto relative z-10">
+        <div className="mb-16 text-center">
+          <span className="text-cyan-500 tracking-[0.3em] text-[10px] uppercase block mb-4 glow-text">The Story</span>
+          <h2 className="font-serif text-3xl md:text-4xl text-white leading-relaxed">
             凡人だからこそ、<br/>
             辿り着けた理論がある。
           </h2>
         </div>
 
-        <div className="space-y-8 text-gray-600 leading-loose font-light font-serif text-justify md:px-12">
+        <div className="space-y-8 text-gray-400 leading-loose font-light font-serif text-justify md:px-12 bg-white/5 p-8 md:p-12 border border-white/10 relative">
+           {/* Decorative corner accents */}
+           <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-cyan-500/50"></div>
+           <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-cyan-500/50"></div>
+
           <p>
-            <span className="text-4xl float-left mr-3 mt-[-6px] text-sage-300 font-serif">20</span>
+            <span className="text-4xl float-left mr-3 mt-[-6px] text-cyan-700 font-serif">20</span>
             歳で美容師として働き始め、25歳までは売り上げ30万もいかないくらいの雇われ美容師でした。
             「これじゃ人生つまらない」そう思い、周りがやっている事と逆の事をしようと決意しました。
           </p>
-          <p className="text-center py-4 text-sage-800 font-medium">
+          <p className="text-white font-medium tracking-widest border-l-2 border-cyan-900 pl-6 my-8">
             そうして選んだのが、ヘアケアの道です。
           </p>
           <p>
@@ -28,19 +32,15 @@ const InstructorStory: React.FC = () => {
             今では年間20〜30回のオフラインセミナーを実施し、全国の美容師様に技術をお伝えしています。
           </p>
           
-          <div className="py-10 flex justify-center">
-            <div className="w-px h-16 bg-sage-200"></div>
-          </div>
-
-          <p>
+          <p className="pt-4">
             私が変われたように、あなたも変われる。<br/>
             お客様だけでなく、その先にいる美容師さんのお客様まで綺麗になってもらいたい。<br/>
             そんな思いで、私が勉強してきた全てを全力でお伝えします。
           </p>
 
-          <div className="pt-12 text-center">
-             <p className="font-serif text-xl text-gray-900 mb-2">Akira</p>
-             <p className="text-[10px] text-gray-400 uppercase tracking-widest">美髪大学 Founder / Hair Specialist</p>
+          <div className="pt-12 text-right">
+            <p className="font-serif text-2xl text-white mb-2 tracking-widest">Akira</p>
+            <p className="text-[10px] text-gray-500 uppercase tracking-[0.3em]">Founder / Hair Specialist</p>
           </div>
         </div>
       </div>

@@ -20,15 +20,28 @@ const Navigation: React.FC = () => {
     { label: '入会案内', href: '#pricing' },
   ];
 
+  // Using the thumbnail API which is often more reliable for direct embedding without authentication issues if shared properly
+  const logoUrl = "https://drive.google.com/thumbnail?id=1_IDgtVCG_5hpGW75XYU0lrNHFBXqM1UU&sz=w1000";
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-sm py-4 border-b border-gray-100' : 'bg-transparent py-6'
+        isScrolled ? 'bg-brand-dark/80 backdrop-blur-md py-4 border-b border-white/10' : 'bg-transparent py-6'
       }`}
     >
-      <div className="max-w-5xl mx-auto px-6 flex justify-between items-center">
-        <div className={`text-xl font-serif tracking-widest font-medium ${isScrolled ? 'text-gray-800' : 'text-gray-900'}`}>
-          美髪大学
+      <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
+        <div className="flex items-center h-12">
+           <img 
+             src={logoUrl} 
+             alt="美髪大学" 
+             className="h-full w-auto object-contain" 
+             // Fallback to text if image fails to load
+             onError={(e) => {
+               e.currentTarget.style.display = 'none';
+               e.currentTarget.nextElementSibling?.classList.remove('hidden');
+             }}
+           />
+           <span className="hidden text-white font-serif text-lg tracking-widest ml-2 whitespace-nowrap">美髪大学</span>
         </div>
 
         {/* Desktop Menu */}
@@ -37,16 +50,14 @@ const Navigation: React.FC = () => {
             <a
               key={link.label}
               href={link.href}
-              className={`text-xs tracking-widest uppercase hover:text-sage-500 transition-colors ${
-                isScrolled ? 'text-gray-500' : 'text-gray-600'
-              }`}
+              className="text-xs tracking-widest uppercase text-gray-300 hover:text-white hover:text-glow transition-all"
             >
               {link.label}
             </a>
           ))}
           <a
             href="#pricing"
-            className="border border-gray-300 px-6 py-2 text-xs tracking-widest text-gray-800 hover:bg-sage-50 hover:border-sage-300 transition-all duration-300"
+            className="border border-white/30 px-6 py-2 text-xs tracking-widest text-white hover:bg-white hover:text-black transition-all duration-300"
           >
             お申し込み
           </a>
@@ -54,7 +65,7 @@ const Navigation: React.FC = () => {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden text-gray-800"
+          className="md:hidden text-white"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -63,13 +74,13 @@ const Navigation: React.FC = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-full left-0 right-0 bg-white border-t border-gray-100 md:hidden flex flex-col items-center py-12 space-y-8 h-screen">
+        <div className="absolute top-full left-0 right-0 bg-brand-dark/95 backdrop-blur-xl border-t border-white/10 md:hidden flex flex-col items-center py-12 space-y-8 h-screen">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-gray-800 text-sm font-serif tracking-widest"
+              className="text-white text-sm font-serif tracking-widest"
             >
               {link.label}
             </a>
@@ -77,7 +88,7 @@ const Navigation: React.FC = () => {
            <a
             href="#pricing"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="bg-gray-900 text-white px-8 py-3 text-xs tracking-widest"
+            className="bg-white text-black px-8 py-3 text-xs tracking-widest"
           >
             お申し込み
           </a>
