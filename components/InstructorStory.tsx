@@ -18,25 +18,45 @@ const InstructorStory: React.FC = () => {
            <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-cyan-500/50"></div>
            <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-cyan-500/50"></div>
 
+          <div>
+            <p className="mb-6">
+              <span className="text-4xl float-left mr-3 mt-[-6px] text-cyan-700 font-serif">20</span>
+              歳で美容師として働き始め、25歳までは売り上げ30万もいかないくらいの雇われ美容師でした。
+            </p>
+
+            <div className="pl-6 border-l-2 border-cyan-900/50 italic text-white/80 my-8 space-y-2">
+              <p>『このままじゃダメだ』</p>
+              <p>『何も得意分野、武器がない』</p>
+              <p>『これじゃ周りに埋もれてしまう』</p>
+            </div>
+
+            <p>
+              そう思い、批判も受けながら周りがやっている事と<span className="text-white border-b border-cyan-500/30">逆の事</span>をしようと決意しました。
+            </p>
+          </div>
+          
           <p>
-            <span className="text-4xl float-left mr-3 mt-[-6px] text-cyan-700 font-serif">20</span>
-            歳で美容師として働き始め、25歳までは売り上げ30万もいかないくらいの雇われ美容師でした。
-            「これじゃ人生つまらない」そう思い、周りがやっている事と逆の事をしようと決意しました。
+            最初は髪質改善や縮毛矯正を打ち出してるサロンはあまりありませんでした。<br/>
+            縮毛矯正はみんな苦手だからです。<br/>
+            「髪質改善」なんて言葉はその時はなく、批判の嵐でした。
           </p>
-          <p className="text-white font-medium tracking-widest border-l-2 border-cyan-900 pl-6 my-8">
-            そうして選んだのが、ヘアケアの道です。
+
+          <p className="text-white font-medium tracking-widest border-l-2 border-cyan-500 pl-6 my-8">
+            それを10年続けた結果、今の自分がいます。
           </p>
+
           <p>
-            全く知識もなかったため、自分自身に1年間で投資しまくりました。
-            28歳で縮毛矯正に目覚め、29歳でオンラインサロンを開講。
+            28歳で縮毛矯正にさらに深く目覚め、29歳でオンラインサロンを開講。<br/>
             今では年間20〜30回のオフラインセミナーを実施し、全国の美容師様に技術をお伝えしています。
           </p>
           
-          <p className="pt-4">
-            私が変われたように、あなたも変われる。<br/>
-            お客様だけでなく、その先にいる美容師さんのお客様まで綺麗になってもらいたい。<br/>
-            そんな思いで、私が勉強してきた全てを全力でお伝えします。
-          </p>
+          <div className="pt-8 border-t border-white/5 mt-8">
+            <p>
+              私が変われたように、あなたも変われる。<br/>
+              お客様だけでなく、その先にいる美容師さんのお客様まで綺麗になってもらいたい。<br/>
+              そんな思いで、私が勉強してきた全てを全力でお伝えします。
+            </p>
+          </div>
 
           <div className="pt-12 text-right">
             <p className="font-serif text-2xl text-white mb-2 tracking-widest">Akira</p>
