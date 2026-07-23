@@ -32,7 +32,7 @@ const ProblemSolution: React.FC = () => {
                 
                 <div className="text-center mb-10">
                     <p className="font-serif text-xl md:text-2xl text-white tracking-widest leading-relaxed">
-                        美髪大学は<br className="md:hidden" />3つのコンテンツを軸に<br className="md:hidden" />本質をお届けする。
+                        elan beauty academyは<br className="md:hidden" />3つのコンテンツを軸に<br className="md:hidden" />本質をお届けする。
                     </p>
                 </div>
 

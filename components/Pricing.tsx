@@ -14,13 +14,13 @@ const Pricing: React.FC = () => {
           <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-cyan-500 to-transparent"></div>
 
           <div className="text-center mb-12">
-            <h3 className="font-serif text-3xl mb-2 text-white">美髪大学</h3>
+            <h3 className="font-serif text-3xl mb-2 text-white">elan beauty academy</h3>
             <p className="text-cyan-600 text-[10px] uppercase tracking-[0.3em] mb-10">Membership</p>
              
             <div className="mb-2">
-               <span className="text-xs text-gray-500 block mb-2">月額会費</span>
+               <span className="text-xs text-gray-500 block mb-2">年会費</span>
                <div className="flex items-baseline justify-center gap-2">
-                 <span className="text-5xl font-serif text-white font-medium text-glow">¥3,300</span>
+                 <span className="text-5xl font-serif text-white font-medium text-glow">¥33,000</span>
                  <span className="text-gray-500 text-xs">(税込)</span>
                </div>
             </div>
@@ -55,7 +55,7 @@ const Pricing: React.FC = () => {
 
           <div className="text-center">
              <a 
-               href="https://line.me/R/ti/p/@239dvolm" 
+               href="https://elanhaircare.base.shop/secret_ec/secret_ec_auths/login" 
                target="_blank"
                rel="noopener noreferrer"
                className="inline-block min-w-[280px] bg-white text-black py-4 px-8 text-xs tracking-[0.2em] hover:bg-cyan-400 hover:text-black transition-all duration-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)]"

@@ -7,8 +7,8 @@ const Footer: React.FC = () => {
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
         
         <div className="text-center md:text-left">
-          <h2 className="text-xl font-serif tracking-widest mb-2 text-white/90">美髪大学</h2>
-          <p className="text-gray-600 text-xs tracking-widest">BIGAMI UNIVERSITY</p>
+          <h2 className="text-xl font-serif tracking-widest mb-2 text-white/90">elan beauty academy</h2>
+          <p className="text-gray-600 text-xs tracking-widest">ELAN BEAUTY ACADEMY</p>
         </div>
 
         <div className="flex gap-6">
@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="text-center md:text-right text-xs text-gray-600 space-y-2">
-          <p>© 2024 Bigami University. All rights reserved.</p>
+          <p>© 2024 elan beauty academy. All rights reserved.</p>
           <div className="flex gap-4 justify-center md:justify-end">
             <a href="#" className="hover:text-gray-400">特定商取引法に基づく表記</a>
             <a href="#" className="hover:text-gray-400">プライバシーポリシー</a>

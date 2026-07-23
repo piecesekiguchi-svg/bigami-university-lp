@@ -20,8 +20,7 @@ const Navigation: React.FC = () => {
     { label: '入会案内', href: '#pricing' },
   ];
 
-  // Using the thumbnail API which is often more reliable for direct embedding without authentication issues if shared properly
-  const logoUrl = "https://drive.google.com/thumbnail?id=1_IDgtVCG_5hpGW75XYU0lrNHFBXqM1UU&sz=w200";
+  const logoUrl = "/logo.jpg";
 
   return (
     <nav
@@ -33,7 +32,7 @@ const Navigation: React.FC = () => {
         <div className="flex items-center h-12">
            <img 
              src={logoUrl} 
-             alt="美髪大学" 
+             alt="elan beauty academy" 
              width="48"
              height="48"
              className="h-full w-auto object-contain" 
@@ -43,7 +42,7 @@ const Navigation: React.FC = () => {
                e.currentTarget.nextElementSibling?.classList.remove('hidden');
              }}
            />
-           <span className="hidden text-white font-serif text-lg tracking-widest ml-2 whitespace-nowrap">美髪大学</span>
+           <span className="hidden text-white font-serif text-lg tracking-widest ml-2 whitespace-nowrap">elan beauty academy</span>
         </div>
 
         {/* Desktop Menu */}

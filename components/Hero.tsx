@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
         <div className="text-center mb-16 md:mb-20">
             <p className="text-xs tracking-[0.4em] text-white/60 mb-4 uppercase">Online Salon</p>
             <h1 className="text-4xl md:text-6xl font-serif tracking-widest text-white mb-2 text-glow transform-gpu">
-              BIGAMI <span className="font-thin mx-2 text-white/50">|</span> UNIVERSITY
+              ELAN <span className="font-thin mx-2 text-white/50">|</span> BEAUTY ACADEMY
             </h1>
         </div>
 
