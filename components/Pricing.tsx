@@ -55,13 +55,17 @@ const Pricing: React.FC = () => {
 
           <div className="text-center">
              <a 
-               href="https://elanhaircare.base.shop/secret_ec/secret_ec_auths/login" 
+               href="https://elanhaircare.base.shop/items/151709888" 
                target="_blank"
                rel="noopener noreferrer"
                className="inline-block min-w-[280px] bg-white text-black py-4 px-8 text-xs tracking-[0.2em] hover:bg-cyan-400 hover:text-black transition-all duration-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)]"
              >
                入会申し込みはこちら
              </a>
+             <p className="text-gray-400 text-xs mt-6 leading-relaxed">
+               パスワードが必要です。<br/>
+               <span className="text-white tracking-widest">joie1212</span>と入力してお進みください。
+             </p>
              <p className="text-gray-500 text-[10px] mt-8 leading-relaxed">
                美容師としての価値を高め、<br className="md:hidden"/>お客様に感動を与える技術を、共に学びましょう。
              </p>
