@@ -25,6 +25,7 @@ const Pricing: React.FC = () => {
                </div>
             </div>
              <p className="text-[10px] text-gray-600 mt-2">※いつでも退会可能です</p>
+             <p className="text-[10px] text-gray-600">※返金はできません。</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12 border-t border-b border-white/5 py-8">
@@ -43,7 +44,7 @@ const Pricing: React.FC = () => {
              <ul className="space-y-3">
               {[
                 "オリジナル薬剤の会員価格購入",
-                "質問し放題のチャットグループ参加権"
+                "専用インスタアカウントからDMで直接ディスカッションできる特権付き"
               ].map((benefit, i) => (
                 <li key={i} className="flex items-center gap-3">
                   <Check className="w-4 h-4 text-cyan-500 shrink-0" />
@@ -52,6 +53,8 @@ const Pricing: React.FC = () => {
               ))}
             </ul>
           </div>
+
+          <p className="text-center text-cyan-300 text-sm font-serif tracking-wide -mt-8 mb-12">質問があればどんどんしちゃいましょう！</p>
 
           <div className="text-center">
              <a 
