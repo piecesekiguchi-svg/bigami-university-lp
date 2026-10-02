@@ -23,6 +23,7 @@ const Pricing: React.FC = () => {
                  <span className="text-5xl font-serif text-white font-medium text-glow">¥33,000</span>
                  <span className="text-gray-500 text-xs">(税込)</span>
                </div>
+               <p className="text-sm text-gray-300 mt-3 tracking-wide">月換算 <span className="text-white font-serif text-lg">¥2,750</span></p>
             </div>
              <p className="text-[10px] text-gray-600 mt-2">※いつでも退会可能です</p>
              <p className="text-[10px] text-gray-600">※返金はできません。</p>
