@@ -32,13 +32,18 @@ const Pricing: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-8 mb-12 border-t border-b border-white/5 py-8">
              <ul className="space-y-3">
               {[
-                "月1回の限定ライブ配信",
-                "過去のアーカイブ動画見放題",
-                "会員限定のオフラインセミナー優先案内"
+                { text: "月1回の限定ライブ配信" },
+                { text: "過去のアーカイブ動画見放題" },
+                { text: "会員限定のオフラインセミナー優先案内", note: "オンサロ生特別金額あり" }
               ].map((benefit, i) => (
-                <li key={i} className="flex items-center gap-3">
-                  <Check className="w-4 h-4 text-cyan-500 shrink-0" />
-                  <span className="text-gray-300 text-sm">{benefit}</span>
+                <li key={i} className="flex items-start gap-3">
+                  <Check className="w-4 h-4 text-cyan-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="text-gray-300 text-sm">{benefit.text}</span>
+                    {benefit.note && (
+                      <span className="block text-cyan-300 text-xs mt-1">{benefit.note}</span>
+                    )}
+                  </div>
                 </li>
               ))}
             </ul>
